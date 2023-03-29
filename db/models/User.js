@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import _ from "lodash";
 import { SALT_ROUNDS } from "../../config.js";
 

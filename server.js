@@ -1,5 +1,4 @@
 import express from "express";
-import todoRouter from "./routes/todo_router.js";
 import userRouter from "./routes/user_router.js";
 // require("./db/db");
 import "express-async-errors";
@@ -11,9 +10,9 @@ config();
 const app = express();
 const PORT = process.env.PORT;
 
-app.use("/todos", todoRouter);
 app.use("/user", userRouter);
 app.use("/post", postRouter);
+
 app.listen(9001);
 
 app.use((err, req, res, next) => {

@@ -29,4 +29,4 @@ const validateRegister = (req, res, next) => {
   next();
 };
 
-export { validateLogin, validateRegister };
+export { validateLogin, validateRegister};
