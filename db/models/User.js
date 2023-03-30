@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import _ from "lodash";
 import { SALT_ROUNDS } from "../../config.js";
 
@@ -22,6 +22,7 @@ const UserSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    picture: String,
     role: {
       type: String,
       required: true,
@@ -33,7 +34,7 @@ const UserSchema = mongoose.Schema(
       transform: (doc, ret) => {
         // delete ret.password;
         // delete ret.__v;
-        const data = _.pick(ret, ["_id", "username", "full_name"]);
+        const data = _.pick(ret, ["_id", "username", "full_name","picture"]);
         return data;
       },
     },
