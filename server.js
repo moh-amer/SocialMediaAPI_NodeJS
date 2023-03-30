@@ -1,6 +1,5 @@
 import express from "express";
 import userRouter from "./routes/user_router.js";
-// require("./db/db");
 import "express-async-errors";
 import { config } from "dotenv";
 import { mongoose } from "./db/db.js";

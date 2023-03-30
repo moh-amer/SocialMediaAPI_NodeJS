@@ -16,11 +16,16 @@ const review = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
+  creator: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    unique: true,
+  },
   post: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Post",
   },
 });
 
-const Review = mongoose.model("reviews", review);
+const Review = mongoose.model("Review", review);
 export default Review;
