@@ -16,9 +16,7 @@ const registerSchema = Joi.object({
 
 const validateLogin = (req, res, next) => {
   const { error } = loginSchema.validate(req.body);
-
   if (error) throw new CustomError("Un-Authorized", 400, error);
-
   next();
 };
 
@@ -29,4 +27,4 @@ const validateRegister = (req, res, next) => {
   next();
 };
 
-export { validateLogin, validateRegister};
+export { validateLogin, validateRegister };

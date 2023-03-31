@@ -32,9 +32,7 @@ const UserSchema = mongoose.Schema(
   {
     toJSON: {
       transform: (doc, ret) => {
-        // delete ret.password;
-        // delete ret.__v;
-        const data = _.pick(ret, ["_id", "username", "full_name","picture"]);
+        const data = _.pick(ret, ["_id", "username", "full_name", "picture"]);
         return data;
       },
     },

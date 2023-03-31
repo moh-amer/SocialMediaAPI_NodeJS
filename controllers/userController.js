@@ -15,7 +15,9 @@ cloudinary.v2.config({
 });
 
 const registerUser = async (req, res) => {
+  console.log("hello");
   const { username, password, full_name, role } = req.body;
+  console.log(username);
   const picture = req.files.image;
   const cloud_pic = await cloudinary.v2.uploader.upload(picture.tempFilePath, {
     public_id: `${Date.now}`,

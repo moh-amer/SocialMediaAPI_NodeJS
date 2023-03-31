@@ -1,4 +1,5 @@
 import Post from "../db/models/post.js";
+import Review from "../db/models/review.js";
 
 const createPost = async (req, res, next) => {
   const { content } = req.body;
